@@ -54,7 +54,7 @@ function last(arr, cb) {
   return cb(arr[arr.length - 1]);
 }
 
-const lastItem = 
+// const lastItem = 
 
 // sumNums adds two numbers (x, y) and passes the result to the callback.
 function sumNums(x, y, cb) {

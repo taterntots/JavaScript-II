@@ -104,8 +104,27 @@ console.log(ticketPriceTotal);
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1
+// Problem 1 - The fun run is overcome with greed! Create an array that only includes donators who gave $100 or more.
 
-// Problem 2
+const largeDonations = runners.filter(function(bigSpenders){
+  return bigSpenders.donation >= 100;
+})
 
-// Problem 3
+console.log(largeDonations);
+
+// Problem 2 We want to see which companies donated the most money so we can send the top three a plaque.
+let topDonations = [];
+
+runners.forEach(function(largestFirst) {
+  topDonations.push(`${largestFirst.donation} ${largestFirst.company_name}`)
+})
+
+console.log(topDonations);
+
+// Problem 3 The mad man is back, this time lowercasing everyone's first name!
+
+const lowerCaseNames = runners.map(function(lowerCase){
+  return lowerCase.first_name.toLowerCase();
+})
+
+console.log(lowerCaseNames);
